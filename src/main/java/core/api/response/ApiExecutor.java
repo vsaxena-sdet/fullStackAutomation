@@ -18,9 +18,12 @@ public class ApiExecutor {
                 .all()
                 .when()
                 .spec(request.build())
+                .request(Method.GET)
+                .then()
                 .log()
                 .all()
-                .request(Method.GET);
+                .extract().response();
+
 
 
     }
