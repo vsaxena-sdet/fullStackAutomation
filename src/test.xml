@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Practice Suite">
+    <test parallel="methods" name="apiTest" >
+        <classes>
+            <class name="src.test.java.testClass.java.testGetUsersList_page"/>
+        </classes>
+    </test>
+
+</suite> <!-- Suite -->
