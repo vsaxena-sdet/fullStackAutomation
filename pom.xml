@@ -24,7 +24,7 @@
                <version>2.12.4</version>
                <configuration>
                   <suiteXmlFiles>
-                     <suiteXmlFile>pom.xml</suiteXmlFile>
+                     <suiteXmlFile>${project.basedir}/test.xml</suiteXmlFile>
                   </suiteXmlFiles>
                </configuration>
             </plugin>     
@@ -58,3 +58,5 @@
     </dependencies>>
     
 </project>
+
+
