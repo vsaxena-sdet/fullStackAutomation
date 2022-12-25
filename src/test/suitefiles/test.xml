@@ -3,7 +3,7 @@
 <suite name="Practice Suite">
     <test parallel="methods" name="apiTest" >
         <classes>
-            <class name="src.test.java.testClass.java.testGetUsersList_page"/>
+            <class name="testClass"/>
         </classes>
     </test>
 
