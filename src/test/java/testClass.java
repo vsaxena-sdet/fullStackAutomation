@@ -16,7 +16,7 @@ public class testClass {
     SoftAssert softAssert = new SoftAssert();
 
     @Test
-    public void testGetUsersList_page(){
+    public void testGetUsersList(){
         Response resp = response.getUsersListResponse();
         softAssert.assertEquals(resp.jsonPath().getInt("page"),2);
         softAssert.assertEquals(resp.jsonPath().getInt("per_page"),6);
