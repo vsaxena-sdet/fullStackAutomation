@@ -13,11 +13,11 @@ import org.testng.asserts.SoftAssert;
 public class GetUsersTest {
 
     ApiResponse response = new ApiResponse();
-    SoftAssert softAssert = new SoftAssert();
 
     @Test
     public void testGetUsersList(){
         Response resp = response.getUsersListResponse();
+        SoftAssert softAssert = new SoftAssert();
         softAssert.assertEquals(resp.jsonPath().getInt("page"),2);
         softAssert.assertEquals(resp.jsonPath().getInt("per_page"),6);
         softAssert.assertAll();
@@ -27,6 +27,7 @@ public class GetUsersTest {
     @Test
     public void testGetUsersLis_perPage(){
         Response resp = response.getUsersListResponse();
+        SoftAssert softAssert = new SoftAssert();
         softAssert.assertEquals(resp.jsonPath().getInt("per_page"),7);
         softAssert.assertAll();
 
