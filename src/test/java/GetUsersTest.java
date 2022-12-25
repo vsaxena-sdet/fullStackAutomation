@@ -10,7 +10,7 @@ import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
 @Listeners(TestListener.class)
-public class testClass {
+public class GetUsersTest {
 
     ApiResponse response = new ApiResponse();
     SoftAssert softAssert = new SoftAssert();
