@@ -24,9 +24,11 @@ public class GetUsersTest {
 
     }
 
-    //@Test
+    @Test
     public void testGetUsersLis_perPage(){
         Response resp = response.getUsersListResponse();
-        Assert.assertEquals(resp.jsonPath().getInt("per_page"),6);
+        softAssert.assertEquals(resp.jsonPath().getInt("per_page"),7);
+        softAssert.assertAll();
+
     }
 }
