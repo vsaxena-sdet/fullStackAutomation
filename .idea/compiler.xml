@@ -9,8 +9,5 @@
         <module name="restAssuredFramework" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="restAssuredFramework" target="8" />
-    </bytecodeTargetLevel>
   </component>
 </project>
