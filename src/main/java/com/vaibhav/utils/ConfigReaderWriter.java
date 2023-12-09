@@ -7,4 +7,8 @@ public class ConfigReaderWriter {
     static {
         API_HOST = "reqres.in";
     }
+
+    public void readFromConfig(){
+     //to -be-implemented
+    }
 }
