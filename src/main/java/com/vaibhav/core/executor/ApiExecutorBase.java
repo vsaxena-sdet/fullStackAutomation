@@ -6,11 +6,10 @@ import io.restassured.response.Response;
 
 public class ApiExecutorBase implements IApi {
 
-    private Response response= null;
-    private ApiBuilderBase base = null;
+    private final ApiBuilderBase base;
 
     public ApiExecutorBase(IRequest<?> req) {
-        Object reqBody = null;
+        Object reqBody;
        if (req.requestBody() == null){
            reqBody = req.build();
        }else{
@@ -37,25 +36,14 @@ public class ApiExecutorBase implements IApi {
 
     @Override
     public Response execute() {
-        this.response = this.base.execute();
-        return this.response;
+        return this.base.execute();
     }
 
     public ApiExecutorBase setRequestBody(){
-
         return this;
     };
 
     public ApiExecutorBase updateRequestBody(){
-
-
         return this;
     }
-
-//    private Callable<ApiResponseImpl> checkStatus(){
-//        final int[] counter = new int[]{0};
-//        return this.execute();
-//    }
-
-
 }

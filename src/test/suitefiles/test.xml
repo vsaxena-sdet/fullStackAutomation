@@ -2,11 +2,11 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Practice Suite">
     <listeners>
-        <listener class-name="core.listners.TestListener"/>
+        <listener class-name="com.vaibhav.listeners.ExtentReportListener"/>
     </listeners>
     <test parallel="methods" name="apiTest" >
         <classes>
-            <class name="GetUsersTest"/>
+            <class name="backend.GetUsersTest"/>
         </classes>
     </test>
 

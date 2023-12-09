@@ -1,3 +1,5 @@
+package backend;
+
 import com.vaibhav.core.executor.ApiExecutor;
 import com.vaibhav.requests.GetUserApiRequest;
 import io.restassured.response.Response;

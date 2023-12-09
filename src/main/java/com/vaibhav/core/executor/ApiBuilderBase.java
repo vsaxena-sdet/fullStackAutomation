@@ -37,7 +37,7 @@ public class ApiBuilderBase {
                 apiResponse = RestAssured.given().filter(new RequestLoggingFilter()).config(config).spec(spec).when().post();
                 break;
             default:
-                throw new RuntimeException("API Method not specified");
+                throw new RuntimeException("Method is not specified");
         }
         return apiResponse;
     }

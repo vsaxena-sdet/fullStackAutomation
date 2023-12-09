@@ -16,6 +16,8 @@ public class ApiExecutor extends ApiExecutorBase{
 
     @Override
     public ApiExecutorBase setRequestBody() {
+        //get the current class name
+        // find the request file whose name matches with current class
         return super.setRequestBody();
     }
 

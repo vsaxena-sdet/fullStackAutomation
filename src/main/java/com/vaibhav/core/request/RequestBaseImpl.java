@@ -1,6 +1,7 @@
 package com.vaibhav.core.request;
 
 import com.vaibhav.interfaces.IRequest;
+import lombok.Getter;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -12,6 +13,7 @@ public abstract class RequestBaseImpl<T> implements IRequest<T> {
     private String baseUrl;
     private String basePath;
     private String contentType;
+    @Getter
     private String jsonBody;
 
     public RequestBaseImpl(String baseUrl) {
@@ -53,16 +55,12 @@ public abstract class RequestBaseImpl<T> implements IRequest<T> {
     private String getClassName(Object obj){
         try {
             return obj.getClass().getName();
-        }catch (Exception var5){
+        }catch (Exception ignored){
             return "";
         }
     }
 
     protected abstract String requestTemplatePath();
-
-    public String getJsonBody() {
-        return jsonBody;
-    }
 
     public void setJsonBody(String jsonBody) {
         this.jsonBody = jsonBody;
