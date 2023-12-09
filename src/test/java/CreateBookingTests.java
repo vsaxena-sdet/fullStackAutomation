@@ -1,5 +1,3 @@
-import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.ObjectMapper;
 import com.vaibhav.core.executor.ApiExecutor;
 import com.vaibhav.models.createBooking.BookingDates;
 import com.vaibhav.models.createBooking.CreateBooking;
@@ -24,6 +22,6 @@ public class CreateBookingTests {
         createBooking.setAdditionalneeds("Breakfast");
         String jsonString = JsonHelperUtil.convertObjectToJsonString(createBooking);
         CreateBookingRequest createBookingRequest = new CreateBookingRequest(jsonString);
-        Response apiResponse = new ApiExecutor(createBookingRequest).setRequestContext().updateRequestContext().execute();
+        Response apiResponse = new ApiExecutor(createBookingRequest).setRequestBody().updateRequestBody().execute();
     }
 }

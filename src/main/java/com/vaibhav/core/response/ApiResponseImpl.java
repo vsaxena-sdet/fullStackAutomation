@@ -1,13 +1,13 @@
 package com.vaibhav.core.response; //ApiResponseBase
 
-import com.vaibhav.interfaces.IApiResponse;
+import com.vaibhav.interfaces.IResponse;
 import io.restassured.http.Header;
 import io.restassured.response.Response;
 
 import java.util.Map;
 import java.util.stream.Collectors;
 
-public class ApiResponseImpl implements IApiResponse {
+public class ApiResponseImpl implements IResponse {
 
     private final Response response;
 

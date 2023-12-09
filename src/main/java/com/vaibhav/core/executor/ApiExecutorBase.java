@@ -1,22 +1,22 @@
 package com.vaibhav.core.executor;
 
 import com.vaibhav.interfaces.IApi;
-import com.vaibhav.interfaces.IApiRequest;
+import com.vaibhav.interfaces.IRequest;
 import io.restassured.response.Response;
 
 public class ApiExecutorBase implements IApi {
 
     private Response response= null;
-    private BuilderBase base = null;
+    private ApiBuilderBase base = null;
 
-    public ApiExecutorBase(IApiRequest<?> req) {
+    public ApiExecutorBase(IRequest<?> req) {
         Object reqBody = null;
        if (req.requestBody() == null){
            reqBody = req.build();
        }else{
            reqBody = req.requestBody();
        }
-       BuilderBase api = new BuilderBase();
+       ApiBuilderBase api = new ApiBuilderBase();
        api.setMethod(req.method());
 
        api.getRequestSpecBuilder().setContentType(req.contentType());
@@ -41,12 +41,12 @@ public class ApiExecutorBase implements IApi {
         return this.response;
     }
 
-    public ApiExecutorBase setRequestContext(){
+    public ApiExecutorBase setRequestBody(){
 
         return this;
     };
 
-    public ApiExecutorBase updateRequestContext(){
+    public ApiExecutorBase updateRequestBody(){
 
 
         return this;

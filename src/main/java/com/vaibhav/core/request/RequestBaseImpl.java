@@ -1,11 +1,11 @@
 package com.vaibhav.core.request;
 
-import com.vaibhav.interfaces.IApiRequest;
+import com.vaibhav.interfaces.IRequest;
 
 import java.util.HashMap;
 import java.util.Map;
 
-public abstract class RequestBaseImpl<T> implements IApiRequest<T> {
+public abstract class RequestBaseImpl<T> implements IRequest<T> {
 
     private Map<String, String> headers = new HashMap<>();
     private Map<String, Object> queryParams = new HashMap<>();

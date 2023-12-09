@@ -4,7 +4,7 @@ import com.vaibhav.enums.HttpMethods;
 
 import java.util.Map;
 
-public interface IApiRequest<T> {
+public interface IRequest<T> {
 
     T requestBody();
     Map<String,String> headers();

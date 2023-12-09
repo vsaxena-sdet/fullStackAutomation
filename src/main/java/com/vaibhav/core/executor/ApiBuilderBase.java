@@ -8,25 +8,15 @@ import io.restassured.filter.log.RequestLoggingFilter;
 import io.restassured.parsing.Parser;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
-import org.apache.commons.lang3.StringUtils;
+import lombok.Getter;
 
-import java.lang.reflect.Method;
-import java.util.Date;
-
-public class BuilderBase {
+@Getter
+public class ApiBuilderBase {
 
     private final RequestSpecBuilder requestSpecBuilder = new RequestSpecBuilder();
     private HttpMethods method;
 
-    public BuilderBase() {
-    }
-
-    public HttpMethods getMethod() {
-        return this.method;
-    }
-
-    public RequestSpecBuilder getRequestSpecBuilder(){
-        return this.requestSpecBuilder;
+    public ApiBuilderBase() {
     }
 
     public void setMethod(HttpMethods method) {

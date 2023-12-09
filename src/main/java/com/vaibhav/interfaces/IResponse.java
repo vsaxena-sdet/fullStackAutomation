@@ -4,7 +4,7 @@ import io.restassured.response.Response;
 
 import java.util.Map;
 
-public interface IApiResponse<T> {
+public interface IResponse<T> {
 
     T body();
     String content();

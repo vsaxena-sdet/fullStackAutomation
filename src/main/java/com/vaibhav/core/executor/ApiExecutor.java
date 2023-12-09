@@ -1,11 +1,11 @@
 package com.vaibhav.core.executor;
 
-import com.vaibhav.interfaces.IApiRequest;
+import com.vaibhav.interfaces.IRequest;
 import io.restassured.response.Response;
 
 public class ApiExecutor extends ApiExecutorBase{
 
-    public ApiExecutor(IApiRequest<?> req) {
+    public ApiExecutor(IRequest<?> req) {
         super(req);
     }
 
@@ -15,12 +15,12 @@ public class ApiExecutor extends ApiExecutorBase{
     }
 
     @Override
-    public ApiExecutorBase setRequestContext() {
-        return super.setRequestContext();
+    public ApiExecutorBase setRequestBody() {
+        return super.setRequestBody();
     }
 
     @Override
-    public ApiExecutorBase updateRequestContext() {
-        return super.updateRequestContext();
+    public ApiExecutorBase updateRequestBody() {
+        return super.updateRequestBody();
     }
 }
